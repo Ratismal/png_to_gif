@@ -1,0 +1,15 @@
+{
+  "name": "png_to_gif",
+  "version": "0.0.1",
+  "description": "Converts a PNG sequence to a gif.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stupid cat",
+  "license": "ISC",
+  "dependencies": {
+    "gifencoder": "^1.1.0",
+    "jimp": "^0.2.28"
+  }
+}
