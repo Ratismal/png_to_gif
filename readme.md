@@ -17,3 +17,4 @@ you get an `output.gif`. yay
     - [ ] transparency
     - [ ] resizing
     - [ ] framerate
+- [ ] global command
