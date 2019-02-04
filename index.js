@@ -23,17 +23,19 @@ async function start() {
     encoder.createReadStream().pipe(fs.createWriteStream(path.join(p, 'output.gif')));
     encoder.start();
     encoder.setRepeat(0);
-    encoder.setDelay(20);
+    encoder.setDelay(33);
     encoder.setQuality(10);
+    // encoder.setTransparent(0x000000);
     let i = 1;
 
     let base = new Jimp(width, height);
-    base.background(0x1b684dff);
+    base.background(0x00000000);
 
     for (const frame of files) {
         process.stdout.write('\rFrame ' + i++ + '/' + files.length);
         let temp = base.clone();
         let f = await Jimp.read(frame);
+        f.scaleToFit(width, height, Jimp.RESIZE_NEAREST_NEIGHBOR);
         temp.composite(f, 0, 0);
         encoder.addFrame(temp.bitmap.data);
     }

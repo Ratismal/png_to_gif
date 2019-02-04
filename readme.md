@@ -5,7 +5,15 @@ im lazy dont judge me
 ## usage
 
 ```
-./index.js /path/to/folder/containing/png/sequence
+node index.js /path/to/folder/containing/png/sequence
 ```
 
 you get an `output.gif`. yay
+
+
+## todo
+
+- [ ] configurable cli args
+    - [ ] transparency
+    - [ ] resizing
+    - [ ] framerate
